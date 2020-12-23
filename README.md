@@ -35,9 +35,9 @@ Please keep the whole `VOLUME ["/home/user"]` line in your Dockerfile. We could 
 
 ##### Frontend config and APP FSM #####
 
-The Tutorial Framework needs a frontend config, an `app_fsm.py` (states and messages) and some initial values for the components (WebIDE, Terminal). Now everything is compressed in a single [app.yml](tree/master/solvable/tutorial/app.yml) file and a [script in the baseimage](https://github.com/avatao-content/baseimage-tutorial/blob/master/tutorial/create_app_from_yml.py) generates the legacy files (`app_fsm.py` and `frontend_config.yaml`) for the framework in the same directory (`/home/user/tutorial/*`).
+The Tutorial Framework needs a frontend config, an `app_fsm.py` (states and messages) and some initial values for the components (WebIDE, Terminal). Now everything is compressed in a single [app.yml](https://github.com/avatao-content/tutorial-node/blob/master/solvable/tutorial/app.yml) file and a [script in the baseimage](https://github.com/avatao-content/baseimage-tutorial/blob/master/tutorial/create_app_from_yml.py) generates the legacy files (`app_fsm.py` and `frontend_config.yaml`) for the framework in the same directory (`/home/user/tutorial/*`).
 
-In the first part of the [app.yml](tree/master/solvable/tutorial/app.yml) you have to deal with the frontend config and initial values of built-in eventhandlers:
+In the first part of the [app.yml](https://github.com/avatao-content/tutorial-node/blob/master/solvable/tutorial/app.yml) you have to deal with the frontend config and initial values of built-in eventhandlers:
 ```yml
 dashboard:
   # The tutorial will step into the first state when it's opened
@@ -107,7 +107,7 @@ In the earlier versions the terminal component was simply a `sudo -u user bash`,
 
 ##### Event handling #####
 
-The basic TFW is really flexible and it allows us to create arbitrary event handler classes by subscribing to any combination of ZMQ message keys, however you have to be familiar with the inner workings of the Framework to use these features effectively. Also, you probably won't have complex use-cases, so we have designed an [SDK](https://github.com/avatao-content/sdk-tfw-node) which helps you with the event handlers. See [eventHandlers.js](tree/master/solvable/tutorial/eventHandlers.js) for an example.
+The basic TFW is really flexible and it allows us to create arbitrary event handler classes by subscribing to any combination of ZMQ message keys, however you have to be familiar with the inner workings of the Framework to use these features effectively. Also, you probably won't have complex use-cases, so we have designed an [SDK](https://github.com/avatao-content/sdk-tfw-node) which helps you with the event handlers. See [eventHandlers.js](https://github.com/avatao-content/tutorial-node/blob/master/solvable/tutorial/eventHandlers.js) for an example.
 
 You can install the SDK to your local environment as well so IntelliSense can help you with the function names when developing exercises:
 ```
@@ -122,7 +122,7 @@ If you want to send messages and step into next states from applications (like w
 
 **What if currently there's no SDK for the language you're using?**
 
-We advise to use an existing SDK (see the Python version)[here](https://github.com/avatao-content/tfwsdk-python), however you can still send raw messages to the TFW through named pipes:
+We advise to use an existing SDK (see the Python version[here](https://github.com/avatao-content/tfwsdk-python)), however you can still send raw messages to the TFW through named pipes:
 ```javascript
 fs = require("fs");
 const message =
