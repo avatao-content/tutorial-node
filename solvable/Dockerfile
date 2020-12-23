@@ -6,7 +6,6 @@ ENV SDKTEST=true
 COPY solvable/webservice $TFW_WEBSERVICE_DIR
 COPY solvable/supervisor /etc/supervisor
 
-# Install Node.js
 RUN apt-get update -yq \
     && apt-get -yq install curl gnupg ca-certificates \
     && curl -L https://deb.nodesource.com/setup_12.x | bash \
@@ -17,7 +16,7 @@ RUN apt-get update -yq \
         ruby-dev=1:2.5.* \
         nodejs
 
-RUN cd ${TFW_WEBSERVICE_DIR} && npm i @avatao/tfwsdk
+RUN cd ${TFW_WEBSERVICE_DIR} && npm install
 RUN ln -s ${TFW_WEBSERVICE_DIR}/node_modules /.tutorial/node_modules
 
 VOLUME ["/home/user"]

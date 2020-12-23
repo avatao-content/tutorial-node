@@ -1,5 +1,5 @@
 const express = require('express')
-const { sdk } = require('tfwsdk');
+const { sdk } = require('@avatao/tfwsdk');
 
 const app = express()
 const port = 11111

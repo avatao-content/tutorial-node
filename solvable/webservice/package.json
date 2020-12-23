@@ -4,8 +4,8 @@
   "description": "Avatao StartR express Hello World app",
   "main": "app.js",
   "dependencies": {
-    "express": "4.17.1",
-    "zeromq": "^6.0.0-beta.5"
+    "express": "^4.17.1",
+    "@avatao/tfwsdk": "^1.0.3"
   },
   "devDependencies": {},
   "scripts": {
