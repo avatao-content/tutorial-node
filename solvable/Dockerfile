@@ -2,7 +2,7 @@ FROM avatao/tutorial:ragdoll-20201201
 
 ENV TFW_WEBSERVICE_DIR=/home/user/webservice
 
-COPY solvable/webservice $TFW_WEBSERVICE_DIR
+COPY solvable/webservice ${TFW_WEBSERVICE_DIR}
 COPY solvable/supervisor /etc/supervisor
 
 RUN apt-get update -yq \
