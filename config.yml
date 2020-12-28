@@ -2,7 +2,7 @@
 # Upgraded from v2
 crp_config:
   solvable:
-    mem_limit_mb: 300
+    mem_limit_mb: 500
   tfw:
     mem_limit_mb: 300
     ports:
