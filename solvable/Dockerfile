@@ -24,7 +24,10 @@ RUN cd ${TFW_WEBSERVICE_DIR} && npm install \
     && mkdir -p /data/db \
     && chown -R mongodb:mongodb /data/db
 
-# Symlink node_modules for the Node TFW SDK
-RUN ln -s ${TFW_WEBSERVICE_DIR}/node_modules /.tutorial/node_modules
+# Prepare the eventhandler in a separate folder
+# since /.tutorial is a volume at this point
+RUN mkdir /.eventhandler \
+    && cp /.tutorial/eventHandlers.js /.eventhandler/eventHandlers.js \
+    && npm install @avatao/tfwsdk
 
 VOLUME ["/home/user", "/data/db"]
