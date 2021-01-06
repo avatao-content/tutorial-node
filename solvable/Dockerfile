@@ -11,7 +11,12 @@ RUN apt-get update -yq \
     && apt-get update -yq \
     && apt-get install -yq nodejs
 
-RUN cd /.tutorial && npm install
 RUN cd ${TFW_WEBSERVICE_DIR} && npm install
+
+# Prepare the eventhandler in a separate folder
+# since /.tutorial is a volume at this point
+RUN mkdir /.eventhandler \
+    && cp /.tutorial/eventHandlers.js /.eventhandler/eventHandlers.js \
+    && npm install @avatao/tfwsdk
 
 VOLUME ["/home/user"]
