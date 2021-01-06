@@ -11,7 +11,7 @@ RUN apt-get update -yq \
     && apt-get update -yq \
     && apt-get install -yq nodejs
 
+RUN cd /.tutorial && npm install
 RUN cd ${TFW_WEBSERVICE_DIR} && npm install
-RUN ln -s ${TFW_WEBSERVICE_DIR}/node_modules /.tutorial/node_modules
 
 VOLUME ["/home/user"]
