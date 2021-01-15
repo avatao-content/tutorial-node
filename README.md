@@ -35,9 +35,9 @@ Please keep the whole `VOLUME ["/home/user"]` line in your Dockerfile. We could 
 
 ##### Frontend config and APP FSM #####
 
-The Tutorial Framework needs a frontend config, an `app_fsm.py` (states and messages) and some initial values for the components (WebIDE, Terminal). Now everything is compressed in a single [app.yml](https://github.com/avatao-content/tutorial-node/blob/master/solvable/tutorial/app.yml) file and a [script in the baseimage](https://github.com/avatao-content/baseimage-tutorial/blob/master/tutorial/create_app_from_yml.py) generates the legacy files (`app_fsm.py` and `frontend_config.yaml`) for the framework in the same directory (`/home/user/tutorial/*`).
+The Tutorial Framework needs a frontend config, an `app_fsm.py` (states and messages) and some initial values for the components (WebIDE, Terminal). Now everything is compressed in a single [tfw.yml](https://github.com/avatao-content/tutorial-node/blob/master/solvable/tutorial/tfw.yml) file and a [script in the baseimage](https://github.com/avatao-content/baseimage-tutorial/blob/master/tutorial/create_app_from_yml.py) generates the legacy files (`app_fsm.py` and `frontend_config.yaml`) for the framework in the same directory (`/home/user/tutorial/*`).
 
-In the first part of the [app.yml](https://github.com/avatao-content/tutorial-node/blob/master/solvable/tutorial/app.yml) you have to deal with the frontend config and initial values of built-in eventhandlers:
+In the first part of the [tfw.yml](https://github.com/avatao-content/tutorial-node/blob/master/solvable/tutorial/tfw.yml) you have to deal with the frontend config and initial values of built-in eventhandlers:
 ```yml
 dashboard:
   # The tutorial will step into the first state when it's opened

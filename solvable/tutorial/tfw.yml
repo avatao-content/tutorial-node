@@ -23,7 +23,7 @@ terminal:
   terminalMenuItem: terminal # terminal / console
 ide:
   patterns: 
-   - /.tutorial/app.yml
+   - /.tutorial/fsm.yml
    - /.tutorial/eventHandlers.js
   showDeployButton: true
   deployButtonText:
@@ -57,4 +57,3 @@ states:
 # webservice.reloadIframe: True                       - Reloads the iframe immediately
 # terminal.write: echo 'hello'                        - Writes command to terminal
 # console.write: Welcome user                         - Writes text to console
-  

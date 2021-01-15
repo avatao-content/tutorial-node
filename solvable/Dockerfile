@@ -1,4 +1,4 @@
-FROM avatao/tutorial:ragdoll-20201201
+FROM avatao/tutorial:ragdoll-20210114
 
 # Install Node
 RUN apt-get update -yq \
