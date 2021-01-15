@@ -1,4 +1,4 @@
-FROM avatao/tutorial:ragdoll-20201201
+FROM avatao/tutorial:ragdoll-20210114
 
 ENV TFW_WEBSERVICE_DIR=/home/user/webservice
 
